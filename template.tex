@@ -1,0 +1,758 @@
+%  LaTeX support: latex@mdpi.com 
+%  For support, please attach all files needed for compiling as well as the log file, and specify your operating system, LaTeX version, and LaTeX editor.
+
+%=================================================================
+\documentclass[journal,article,submit,pdftex,moreauthors]{Definitions/mdpi} 
+
+%--------------------
+% Class Options:
+%--------------------
+%----------
+% journal
+%----------
+% Choose between the following MDPI journals:
+% acoustics, actuators, addictions, admsci, adolescents, aerobiology, aerospace, agriculture, agriengineering, agrochemicals, agronomy, ai, air, algorithms, allergies, alloys, analytica, analytics, anatomia, animals, antibiotics, antibodies, antioxidants, applbiosci, appliedchem, appliedmath, applmech, applmicrobiol, applnano, applsci, aquacj, architecture, arm, arthropoda, arts, asc, asi, astronomy, atmosphere, atoms, audiolres, automation, axioms, bacteria, batteries, bdcc, behavsci, beverages, biochem, bioengineering, biologics, biology, biomass, biomechanics, biomed, biomedicines, biomedinformatics, biomimetics, biomolecules, biophysica, biosensors, biotech, birds, bloods, blsf, brainsci, breath, buildings, businesses, cancers, carbon, cardiogenetics, catalysts, cells, ceramics, challenges, chemengineering, chemistry, chemosensors, chemproc, children, chips, cimb, civileng, cleantechnol, climate, clinpract, clockssleep, cmd, coasts, coatings, colloids, colorants, commodities, compounds, computation, computers, condensedmatter, conservation, constrmater, cosmetics, covid, crops, cryptography, crystals, csmf, ctn, curroncol, cyber, dairy, data, ddc, dentistry, dermato, dermatopathology, designs, devices, diabetology, diagnostics, dietetics, digital, disabilities, diseases, diversity, dna, drones, dynamics, earth, ebj, ecologies, econometrics, economies, education, ejihpe, electricity, electrochem, electronicmat, electronics, encyclopedia, endocrines, energies, eng, engproc, entomology, entropy, environments, environsciproc, epidemiologia, epigenomes, est, fermentation, fibers, fintech, fire, fishes, fluids, foods, forecasting, forensicsci, forests, foundations, fractalfract, fuels, future, futureinternet, futurepharmacol, futurephys, futuretransp, galaxies, games, gases, gastroent, gastrointestdisord, gels, genealogy, genes, geographies, geohazards, geomatics, geosciences, geotechnics, geriatrics, grasses, gucdd, hazardousmatters, healthcare, hearts, hemato, hematolrep, heritage, higheredu, highthroughput, histories, horticulturae, hospitals, humanities, humans, hydrobiology, hydrogen, hydrology, hygiene, idr, ijerph, ijfs, ijgi, ijms, ijns, ijpb, ijtm, ijtpp, ime, immuno, informatics, information, infrastructures, inorganics, insects, instruments, inventions, iot, j, jal, jcdd, jcm, jcp, jcs, jcto, jdb, jeta, jfb, jfmk, jimaging, jintelligence, jlpea, jmmp, jmp, jmse, jne, jnt, jof, joitmc, jor, journalmedia, jox, jpm, jrfm, jsan, jtaer, jvd, jzbg, kidneydial, kinasesphosphatases, knowledge, land, languages, laws, life, liquids, literature, livers, logics, logistics, lubricants, lymphatics, machines, macromol, magnetism, magnetochemistry, make, marinedrugs, materials, materproc, mathematics, mca, measurements, medicina, medicines, medsci, membranes, merits, metabolites, metals, meteorology, methane, metrology, micro, microarrays, microbiolres, micromachines, microorganisms, microplastics, minerals, mining, modelling, molbank, molecules, mps, msf, mti, muscles, nanoenergyadv, nanomanufacturing,\gdef\@continuouspages{yes}} nanomaterials, ncrna, ndt, network, neuroglia, neurolint, neurosci, nitrogen, notspecified, %%nri, nursrep, nutraceuticals, nutrients, obesities, oceans, ohbm, onco, %oncopathology, optics, oral, organics, organoids, osteology, oxygen, parasites, parasitologia, particles, pathogens, pathophysiology, pediatrrep, pharmaceuticals, pharmaceutics, pharmacoepidemiology,\gdef\@ISSN{2813-0618}\gdef\@continuous pharmacy, philosophies, photochem, photonics, phycology, physchem, physics, physiologia, plants, plasma, platforms, pollutants, polymers, polysaccharides, poultry, powders, preprints, proceedings, processes, prosthesis, proteomes, psf, psych, psychiatryint, psychoactives, publications, quantumrep, quaternary, qubs, radiation, reactions, receptors, recycling, regeneration, religions, remotesensing, reports, reprodmed, resources, rheumato, risks, robotics, ruminants, safety, sci, scipharm, sclerosis, seeds, sensors, separations, sexes, signals, sinusitis, skins, smartcities, sna, societies, socsci, software, soilsystems, solar, solids, spectroscj, sports, standards, stats, std, stresses, surfaces, surgeries, suschem, sustainability, symmetry, synbio, systems, targets, taxonomy, technologies, telecom, test, textiles, thalassrep, thermo, tomography, tourismhosp, toxics, toxins, transplantology, transportation, traumacare, traumas, tropicalmed, universe, urbansci, uro, vaccines, vehicles, venereology, vetsci, vibration, virtualworlds, viruses, vision, waste, water, wem, wevj, wind, women, world, youth, zoonoticdis 
+% For posting an early version of this manuscript as a preprint, you may use "preprints" as the journal. Changing "submit" to "accept" before posting will remove line numbers.
+
+%---------
+% article
+%---------
+% The default type of manuscript is "article", but can be replaced by: 
+% abstract, addendum, article, book, bookreview, briefreport, casereport, comment, commentary, communication, conferenceproceedings, correction, conferencereport, entry, expressionofconcern, extendedabstract, datadescriptor, editorial, essay, erratum, hypothesis, interestingimage, obituary, opinion, projectreport, reply, retraction, review, perspective, protocol, shortnote, studyprotocol, systematicreview, supfile, technicalnote, viewpoint, guidelines, registeredreport, tutorial
+% supfile = supplementary materials
+
+%----------
+% submit
+%----------
+% The class option "submit" will be changed to "accept" by the Editorial Office when the paper is accepted. This will only make changes to the frontpage (e.g., the logo of the journal will get visible), the headings, and the copyright information. Also, line numbering will be removed. Journal info and pagination for accepted papers will also be assigned by the Editorial Office.
+
+%------------------
+% moreauthors
+%------------------
+% If there is only one author the class option oneauthor should be used. Otherwise use the class option moreauthors.
+
+%---------
+% pdftex
+%---------
+% The option pdftex is for use with pdfLaTeX. Remove "pdftex" for (1) compiling with LaTeX & dvi2pdf (if eps figures are used) or for (2) compiling with XeLaTeX.
+
+%=================================================================
+% MDPI internal commands - do not modify
+\firstpage{1} 
+\makeatletter 
+\setcounter{page}{\@firstpage} 
+\makeatother
+\pubvolume{1}
+\issuenum{1}
+\articlenumber{0}
+\pubyear{2023}
+\copyrightyear{2023}
+%\externaleditor{Academic Editor: Firstname Lastname}
+\datereceived{ } 
+\daterevised{ } % Comment out if no revised date
+\dateaccepted{ } 
+\datepublished{ } 
+%\datecorrected{} % For corrected papers: "Corrected: XXX" date in the original paper.
+%\dateretracted{} % For corrected papers: "Retracted: XXX" date in the original paper.
+\hreflink{https://doi.org/} % If needed use \linebreak
+%\doinum{}
+%\pdfoutput=1 % Uncommented for upload to arXiv.org
+
+%=================================================================
+% Add packages and commands here. The following packages are loaded in our class file: fontenc, inputenc, calc, indentfirst, fancyhdr, graphicx, epstopdf, lastpage, ifthen, float, amsmath, amssymb, lineno, setspace, enumitem, mathpazo, booktabs, titlesec, etoolbox, tabto, xcolor, colortbl, soul, multirow, microtype, tikz, totcount, changepage, attrib, upgreek, array, tabularx, pbox, ragged2e, tocloft, marginnote, marginfix, enotez, amsthm, natbib, hyperref, cleveref, scrextend, url, geometry, newfloat, caption, draftwatermark, seqsplit
+% cleveref: load \crefname definitions after \begin{document}
+\usepackage{comment}
+%=================================================================
+% Please use the following mathematics environments: Theorem, Lemma, Corollary, Proposition, Characterization, Property, Problem, Example, ExamplesandDefinitions, Hypothesis, Remark, Definition, Notation, Assumption
+%% For proofs, please use the proof environment (the amsthm package is loaded by the MDPI class).
+
+%=================================================================
+% Full title of the paper (Capitalized)
+\Title{Optimal coordination of over-current relays in microgrid considering European and North American curves using directional over-current relays}
+
+% MDPI internal command: Title for citation in the left column
+\TitleCitation{Title}
+
+% Author Orchid ID: enter ID or remove command
+\newcommand{\orcidauthorA}{0000-0001-9806-3111} % Add \orcidA{} behind the author's name
+\newcommand{\orcidauthorB}{0000-0002-9134-8576} % Add \orcidB{} behind the author's name
+\newcommand{\orcidauthorC}{0000-0002-2369-6173}
+\newcommand{\orcidauthorD}{0000-0003-1407-5559}
+
+% Authors, for the paper (add full first names)
+\Author{León Felipe Serna-Montoya $^{1,\dagger,\ddagger}$ \orcidA{}, Sergio D. Saldarriaga-Zuluaga \orcidB{} $^{2,\ddagger}$, Jesús M. López-Lezama \orcidC{} and Nicolás Muñoz-Galeano \orcidD{}.}
+
+%\longauthorlist{yes}
+
+% MDPI internal command: Authors, for metadata in PDF
+\AuthorNames{Firstname Lastname, Firstname Lastname and Firstname Lastname}
+
+% MDPI internal command: Authors, for citation in the left column
+\AuthorCitation{Lastname, F.; Lastname, F.; Lastname, F.}
+% If this is a Chicago style journal: Lastname, Firstname, Firstname Lastname, and Firstname Lastname.
+
+% Affiliations / Addresses (Add [1] after \address if there is only one affiliation.)
+\address{%
+$^{1}$ \quad Affiliation 1; e-mail@e-mail.com\\
+$^{2}$ \quad Affiliation 2; e-mail@e-mail.com}
+
+% Contact information of the corresponding author
+\corres{Correspondence: e-mail@e-mail.com; Tel.: (optional; include country code; if there are multiple corresponding authors, add author initials) +xx-xxxx-xxx-xxxx (F.L.)}
+
+% Current address and/or shared authorship
+\firstnote{Current address: Affiliation 3.} 
+\secondnote{These authors contributed equally to this work.}
+% The commands \thirdnote{} till \eighthnote{} are available for further notes
+
+%\simplesumm{} % Simple summary
+
+%\conference{} % An extended version of a conference paper
+
+% Abstract (Do not insert blank lines, i.e. \\) 
+\abstract{A single paragraph of about 200 words maximum. For research articles, abstracts should give a pertinent overview of the work. We strongly encourage authors to use the following style of structured abstracts, but without headings: (1) Background: place the question addressed in a broad context and highlight the purpose of the study; (2) Methods: describe briefly the main methods or treatments applied; (3) Results: summarize the article's main findings; (4) Conclusions: indicate the main conclusions or interpretations. The abstract should be an objective representation of the article, it must not contain results which are not presented and substantiated in the main text and should not exaggerate the main conclusions.}
+
+% Keywords
+\keyword{keyword 1; keyword 2; keyword 3 (List three to ten pertinent keywords specific to the article; yet reasonably common within the subject discipline.)} 
+
+% The fields PACS, MSC, and JEL may be left empty or commented out if not applicable
+%\PACS{J0101}
+%\MSC{}
+%\JEL{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Diversity
+%\LSID{\url{http://}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Applied Sciences
+%\featuredapplication{Authors are encouraged to provide a concise description of the specific application or a potential application of the work. This section is not mandatory.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Data
+%\dataset{DOI number or link to the deposited data set if the data set is published separately. If the data set shall be published as a supplement to this paper, this field will be filled by the journal editors. In this case, please submit the data set as a supplement.}
+%\datasetlicense{License under which the data set is made available (CC0, CC-BY, CC-BY-SA, CC-BY-NC, etc.)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Toxins
+%\keycontribution{The breakthroughs or highlights of the manuscript. Authors can write one or two sentences to describe the most important part of the paper.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Encyclopedia
+%\encyclopediadef{For entry manuscripts only: please provide a brief overview of the entry title instead of an abstract.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Advances in Respiratory Medicine
+%\addhighlights{yes}
+%\renewcommand{\addhighlights}{%
+
+%\noindent This is an obligatory section in “Advances in Respiratory Medicine”, whose goal is to increase the discoverability and readability of the article via search engines and other scholars. Highlights should not be a copy of the abstract, but a simple text allowing the reader to quickly and simplified find out what the article is about and what can be cited from it. Each of these parts should be devoted up to 2~bullet points.\vspace{3pt}\\
+%\textbf{What are the main findings?}
+% \begin{itemize}[labelsep=2.5mm,topsep=-3pt]
+% \item First bullet.
+% \item Second bullet.
+% \end{itemize}\vspace{3pt}
+%\textbf{What is the implication of the main finding?}
+% \begin{itemize}[labelsep=2.5mm,topsep=-3pt]
+% \item First bullet.
+% \item Second bullet.
+% \end{itemize}
+%}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Introduction}
+
+Las microrredes son sistemas eléctricos de distribución de energía que pueden funcionar de manera autónoma o conectados a la red eléctrica principal. En la actualidad, las microrredes están ganando popularidad debido a la integración de fuentes de energía renovable, como la energía solar y eólica, en los sistemas de energía eléctrica \cite{Farooq2018,Chen2020}. Una de las principales ventajas de las microrredes es su capacidad para proporcionar una fuente de energía más segura y confiable a las comunidades aisladas o remotas, especialmente en regiones con una red eléctrica subdesarrollada \cite{Farooq2018}. Sin embargo, la integración de fuentes de energía renovable en las microrredes plantea desafíos significativos, como la variabilidad y la incertidumbre en la generación de energía, lo que puede afectar la estabilidad y la calidad de la energía suministrada \cite{Khan2019, Wang2020}. Por lo tanto, se requiere una coordinación adecuada de los sistemas de protección y control en las microrredes, utilizando algoritmos de optimización adecuados para garantizar la estabilidad y la seguridad del sistema \cite{Akhtar2021,chen2021coordination,li2021improved}.
+
+La coordinación de relés de sobrecorriente es un tema importante en los sistemas de micro-redes con alta penetración de generación distribuida. Diversos estudios han abordado esta problemática, proponiendo diferentes algoritmos de optimización para lograr una coordinación óptima de los relés. En \cite{chen2021coordination}, se presenta una estrategia de coordinación de relés de sobrecorriente basada en la lógica difusa y se valida su efectividad mediante simulaciones. Por otro lado, en \cite{akhtar2021optimal}, se propone un algoritmo híbrido de optimización por enjambre de partículas para obtener la coordinación óptima de los relés. Por último, en \cite{li2021improved}, se presenta una mejora en el algoritmo de optimización de enjambre de partículas adaptativo (APSO) para la coordinación de relés de sobrecorriente en microredes. Estos estudios destacan la importancia de la coordinación de los relés de sobrecorriente en los sistemas de micro-redes y proponen diversas soluciones para mejorar su eficacia.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Revisión de literatura}
+
+En \cite{damanjani_statistics-based_2021} es reportada una revisión de literatura que ilustra el aporte de investigadores en la protección de MGs, enfocado en protecciones adaptativas. Los relés de sobre corriente direccionales (DOCRs) adaptativos son protecciones que tienen un grupo de parámetros establecidos de forma offline, cada grupo de parámetros es activado de manera remota (comunicaciones industriales) por un controlador maestro centralizado o descentralizado que identifica los escenarios operativos y define el grupo de parámetro que debe establecerse en cada protección. Comercialmente los grupos de parámetros son limitados a 4 conjuntos de parámetros. En \cite{damanjani_statistics-based_2021}, es analizado estadísticamente el problema de la coordinación de protecciones en MGs, según los autores hallaron 1417 publicaciones relacionadas con protecciones en MGs, mientras que 25521 publicaciones relacionadas con MGs, concluyendo que un $18\%$ de las publicaciones son enfocadas en la protección de las MGs. Ilustrando que el \textit{knowledge gap} (KG) es evidente y la comunidad científica está altamente interesada en hallar soluciones en la coordinación de protecciones en MGs.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=10.5 cm]{Figures/f3_year.png}
+    \caption{Total de publicaciones anuales con el tema de protecciones adaptativas en MGs.}
+    \label{fig:rvw_year}
+\end{figure}
+\unskip
+
+Los autores de \cite{damanjani_statistics-based_2021} proponen una estructura similar para las siguientes gráficas, sin embargo, estás fueron actualizadas al estado de arte contemporáneo, empleando algoritmos de busqueda en el gestor de base de datos \textit{Scopus}. Los algoritmos de busqueda usados para construir las siguientes gráficas son similares a los reportados por los autores, para efectos comparativos y de consistencia en la información. La figura \ref{fig:rvw_year} tiene en su eje de abscisas el año, mientras que el eje de las ordenadas muestra el total de publicaciones anuales con el tema de protecciones adaptativas en MGs, evidenciando una tendencia alcista de la comunidad científica en el tema de protecciones adaptativas en MGs, considerando el número de publicaciones anuales.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=10.5 cm]{Figures/f4_doctype.png}
+    \caption{Tipo de publicaciones sobre protecciones adaptativas en MGs.}
+    \label{fig:rvw_doctype}
+\end{figure}
+\unskip
+
+La figura \ref{fig:rvw_doctype} es una gráfica tipo torta, representando el tipo de publicaciones asociadas al tema de protecciones adaptativas en MGs. Note que, el gran porcentaje es dado para artículos en revistas indexadas y conferencias internacionales, sumando un $85.7\%$. El tema de las protecciones adaptativas en microrredes ha sido objeto de investigación por varios autores, entre los que destacan: Kauhaniemi et al. \cite{kauhaniemi2016adaptive} que propusieron un método de protección basado en la medición de la impedancia de la red eléctrica, que es capaz de adaptarse a diferentes configuraciones de la microrred. Singh y Mishra \cite{singh2018novel} desarrollaron un algoritmo de protección que utiliza redes neuronales artificiales para la detección de fallas en la microrred. Por su parte, Basak et al. \cite{basak2020adaptive} propusieron un esquema de protección adaptativa que utiliza la transformada Wavelet y técnicas de clasificación de patrones para la detección de fallas. Todos estos autores han contribuido significativamente al desarrollo de técnicas de protección adaptativa para microrredes, lo que es fundamental para garantizar la seguridad y confiabilidad del sistema eléctrico. El aporte de los tres principales autores ha sido mencionado, complementando la figura \ref{fig:rvw_authors} que muestra los autores más prominentes en el área por la cantidad de publicaciones. El eje de abscisas son los autores y las ordenadas el número de públicaciones en el área. 
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=10.5 cm]{Figures/f5_authors.png}
+    \caption{Principales investigadores en tema de protecciones adaptativas en MGs.}
+    \label{fig:rvw_authors}
+\end{figure}
+\unskip
+
+El área de protecciones adaptativas en microrredes ha sido objeto de estudio por varios autores en diferentes revistas. Entre las más destacadas se encuentran Electric Power Systems Research, Dianli Xitong Baohu Yu Kongzhi Power System Protection And Control, Lecture Notes In Electrical Engineering y IEEE Transactions On Smart Grid. Los autores de Electric Power Systems Research, Kauhaniemi et al. \cite{kauhaniemi2016adaptive}, propusieron un método de protección basado en la medición de la impedancia de la red eléctrica, que es capaz de adaptarse a diferentes configuraciones de la microrred. Wang et al. \cite{wang2019review}, en su trabajo publicado en Dianli Xitong Baohu Yu Kongzhi Power System Protection And Control, presentaron una revisión completa de los desarrollos más recientes en protecciones adaptativas para microrredes. Zhang et al. \cite{zhang2018microgrid}, en su trabajo publicado en Lecture Notes In Electrical Engineering, propusieron un esquema de protección que combina técnicas de filtrado y algoritmos de detección de fallas para mejorar la confiabilidad del sistema. Finalmente, Meng et al. \cite{meng2019adaptive}, en su trabajo publicado en IEEE Transactions On Smart Grid, propusieron un método de protección adaptativa basado en un modelo de regresión logística y técnicas de aprendizaje automático para la detección de fallas. Todos estos autores han contribuido significativamente al desarrollo de técnicas de protección adaptativa para microrredes, lo que es fundamental para garantizar la seguridad y confiabilidad del sistema eléctrico en MGs. La figura \ref{fig:rvw_source} muestra las principales revistas, relacionando el nombre de las revistas indexadas con el número de publicaciones en el área. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=10.5 cm]{Figures/f6_source.png}
+    \caption{Principales revistas en tema de protecciones adaptativas en MGs.}
+    \label{fig:rvw_source}
+\end{figure}
+\unskip
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Metodología}
+
+%----------------------------------
+\subsection{Modelo de optimización}
+
+La ecuación \ref{eq_OF} representa la función objetivo del modelo de optimización, minimizando el tiempo de operación. La expresión $t_{if}$ es el tiempo de operación en segundos del relé $i$ al presentarse una falla $f$. De igual forma, $m$ es el numero total de relés en el sistema y $n$ el numero de fallas en cada línea del sistema. 
+
+\begin{equation}\label{eq_OF}
+    Min \sum_{i=1}^m \sum_{f=1}^n t_{if}
+\end{equation}
+
+A continuación son descritas las restricciones del modelo de optimización. La ecuación \ref{eq_CTI} modela la selectividad del sistema entre cada pareja de relés, mediante la resta del tiempo de operación del relé principal respecto al relé de respaldo. Conservando la nomenclatura mencionada anterirormente, el relé principal $i$ actua sobre la falla $f$. De manera similar, el relé de respaldo $j$ frente a la falla $f$, note que ambos relés son operativos para la misma falla $f$. Finalmente, Coordination Time Interval (CTI) es la diferencia operativa entre el relé principlal y relé de respaldo, esta restricción permite modelar el criterio de selectividad del sistema. Usualmente es usado en un rango de 0.2 a 0.5 segundos, En este caso en particular es definido en 0.3 segundos para efectos comparativos entre las publicaciones técnicas.
+
+\begin{equation}\label{eq_CTI}
+    t_{jf} - t_{if} \geq CTI
+\end{equation}
+
+La ecuación \ref{eq_tif} muestra la forma de calcular el tiempo operativo $t_{if}$ de cada relé frente a cada falla. Cada relé tiene un conjunto de 5 parámetros asociados $TMS$, $PSM$, $A$, $B$, y $C$. donde $TMS$ es el Time Multplier Settings, $PSM$ es el Plug Setting Multiplier; Mientras que $A$, $B$, y $C$ son los parámetros asociados a cada tipo de curva estandarizada, el detalle de estos parámetros será abordado posteriormente con mayor profundidad.  
+
+\begin{equation}\label{eq_tif}
+    t_{if} = \frac{A \cdot TMS_i}{PSM_{if}^B -1 }+C
+\end{equation}
+
+
+El PSM es una función de la corriente de falla $I_{if}$ vista por cada relé $i$ y la corriente de pickup ($i_{pickup_i}$), la corriente de falla $I_{if}$ corresponde a la medida tomada por los relés de corriente (CTs) y su relación de transformación, mientras que, $i_{pickup_i}$ es la corriente máxima de operación de las cargas, la cual es establecida por cada relé $i$. La ecuación \ref{eq_PSM} representa la función anteriormente mencionada.
+
+\begin{equation}\label{eq_PSM}
+    PSM_{if} = \frac{I_{if}}{i_{pickup_i}}
+\end{equation}
+
+La ecuación \ref{eq_tif_min_n_max} presenta los limites de tiempo de operación dentro del limite inferior $t_{i_{min}}$ y superior $t_{i_max}$. Asegurando que, el limite inferior no sea negativo y el superior en un rango tolerable.
+
+\begin{equation}\label{eq_tif_min_n_max}
+    t_{i_{min}} \leq t_{if} \leq t_{i_max}
+\end{equation}
+
+La ecuación \ref{eq_PSMmax} describe una innovadora restricción reportada en la literatura técnica, convencionalmente $PSM_{max}$ es un parámetro fijo, sin embargo, en \cite{saldarriaga-zuluaga_adaptive_2021} ha sido considerado como una variable de decisión, en el presente modelo también es usada la restricción de la ecuación \ref{eq_PSMmax} con base en los mejores resultados reportados en el proceso de optimización. La ecuación \ref{eq_PSM_boundaries} describe los limites superior $PSM_{imax}$ e inferior $PSM_{imin}$, según los modelos clásicos.
+
+\begin{equation}\label{eq_PSMmax}
+    \alpha \leq PSM_{imax} \leq \beta
+\end{equation}
+
+\begin{equation}\label{eq_PSM_boundaries}
+    PSM_{imin} \leq PSM_{i} \leq PSM_{imax}
+\end{equation}
+
+El modelo de optimización tiene asociadas dos restricciones adiccionales, la primera para la curva caracteristica (ecuación \ref{eq_tif}) y la segunda que dicha curva pertenezca a las curvas estandar de los fabricantes americanos o europeos. La segunda ecuación mencionada es \ref{eq_SCC}, donde $SCC_i$ hace referencia a la i-esima curva estandar y $\Omega_c$ es el conjunto de curvas estandar. En la siguiente sección se profundizara sobre los conjuntos de curvas $\Omega_c$ y los parámetros de la ecuación \ref{eq_tif}.
+
+\begin{equation}
+\label{eq_SCC}
+    SCC_i \in \Omega_c
+\end{equation}
+
+%----------------------------------
+\subsection{Metodología de la simulación}
+
+International Electrotechnical Commission (IEC) es la entidad que provee algunas topologías de investigación, orientadas al desarrollo de nuevas metodologías y coordinación de protecciones propuestos por la comunidad cientifica. La figura \ref{fig:MG} ilustra la MG IEC de pruebas, los parámetros de la MG son descritos en \ref{kar_data-mining_2017}. Las simulaciones de las fallas fueron calculadas en el software DIgSilent Power Factory 2022 SP2, usando el metodo IEC 60909 con fallas trifásicas al $50\%$ de cada línea. La MG de pruebas contiene 6 barras, con 5 líneas, incluyendo generación distribuida y la conexión a la red. Adicionalmente, esta MG de pruebas tiene embebidos dos interruptores CBLOOP1 y CBLOOP2, los cuales son encargados de habilitar dos lazos, enmallando el sistema.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=10.5 cm]{Figures/IEC_benchmark.png}
+    \caption{IEC MG}
+    \label{fig:MG}
+\end{figure}
+\unskip
+
+
+La tabla \ref{tab_SCs} ilustra la fallas de F1 a F5, relacionando las líneas en las cuales son efectuadas las fallas trifásicas a la mitad de la línea, llamadas DL-1 a DL-5, la ubicación de las líneas en la IEC MG puede ser observada en la figura \ref{fig:MG}. En el encabezado relaciona los modos operativos del OM1 al OM4 con las corrientes de cortocircuito, calculando los valores de cortocircuito con el método IEC06909 los valores están mencionados en kiloamperios, mediante simulaciones en Power Factory DIgSilent. Note que como fue mencionado anteriormente, los niveles de cortocircuito sufren cambios bruscos entre cada cambio de modo operativo.
+
+\begin{table}[H]
+
+\caption{Fallas y corrientes de cortocircuito asociado a cada línea} \\
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\begin{tabularx}{\textwidth}{CCCCCC}
+\toprule
+\textbf{Fallas} & \textbf{Lineas}  & \textbf{OM1} & \textbf{OM2} & \textbf{OM3} & \textbf{OM44} \\ 
+\midrule 
+F1   & DL-5 & 3695 & 6296 & 4293 & 3941\\
+F2   & DL-4 & 5130 & 8725 & 6363 & 4158\\
+F3   & DL-2 & 8375 & 11891 & 10116 & 3558\\ 
+F4   & DL-1 & 5130 & 6989 & 6428 & 3188\\
+F5   & DL-3 & 3695 & 5904 & 4223 & 3590\\
+\midrule
+\multicolumn{4}{l}{$^{\mathrm{a}}$ DL, son las líneas donde se hace la falla.}
+\bottomrule
+\label{tab_SCs}
+\end{tabularx}
+
+\end{table}
+
+
+La tabla \ref{tab_OMs} ilustra los modos operativos considerados en el presente artículo, en la figura \ref{fig:MG} es ilustada la posición de cada unidad de generación distribuida y su barra asociada. En la tabla \ref{tab_OMs} el numero 1 indica que la unidad de generación está entregando energía a la red, en caso contrario, cuando el numero 0 aparece indica que la unidad no está entregando energía a la red. En todos los escenarios considerados en este artículo los interruptores CBLOOP1 y CBLOOP son considerados abiertos. Adicionalmente, La conexión con la red siempre está presente, en otras palabras, no es considerado el modo aislado.
+
+
+\begin{table}[H]
+\caption{Modos de operación} 
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\begin{tabularx}{\textwidth}{CCCCCC}
+\toprule
+\textbf{Modos de operación} & \textbf{Red}  & \textbf{GD1} & \textbf{GD2} & \textbf{GD3} & \textbf{GD4} \\ 
+\midrule
+OM1   & 1 & 0 & 0 & 0 & 0\\
+OM2   & 1 & 1 & 1 & 1 & 1\\
+OM3   & 1 & 1 & 1 & 0 & 0\\ 
+OM4   & 0 & 1 & 1 & 1 & 1\\
+\bottomrule
+\label{tab_OMs}
+\end{tabularx}
+\noindent{\footnotesize{1 indica encendido y 0 indica apagado.}}
+\end{table}
+
+La tabla \ref{tab_RCT} especifica la relación de transformación del transfroamdor de corriente (RCT) asociado a cada relé (Rx), Adicionalmente, la columna $i_{pickup}$ especifica la corriente de arranque definida por la carga para cada relé. La ubicación de los relés sobre la MG IEC de pruebas se puede observar en la figura \ref{fig:MG}
+
+
+\begin{table}[H]
+
+\caption{$RCT$ y $i_{pickup}$ para cada relé} 
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\begin{tabularx}{\textwidth}{CCC}
+
+\toprule
+\textbf{Relé} & \textbf{$RCT$}  & \textbf{$i_{pickup}$}\\ 
+\midrule
+R1   & 400 & 0.5\\
+R2   & 400 & 0.5\\
+R3   & 400 & 0.5\\
+R4   & 400 & 0.5\\
+R5   & 400 & 0.5\\
+R6   & 400 & 0.5\\
+R7   & 1200 & 1\\
+R8   & 400 & 0.5\\
+R9   & 400 & 0.5\\
+R10   & 400 & 0.5\\
+R11   & 400 & 0.65\\
+R12   & 400 & 0.5\\
+R13   & 400 & 0.88\\
+R14   & 400 & 0.65\\
+R15   & 400 & 0.55\\
+\bottomrule
+
+\label{tab_RCT}
+\end{tabularx}
+\end{table}
+
+%----------------------------------
+\subsection{Curvas características estándar}
+
+La protección de sistemas eléctricos es esencial para garantizar la seguridad y la confiabilidad del suministro eléctrico. Entre los diferentes dispositivos de protección, los relés de sobrecorriente son ampliamente utilizados debido a su simplicidad y bajo costo. Sin embargo, para garantizar una protección efectiva, es necesario ajustar adecuadamente los parámetros de los relés y coordinarlos adecuadamente.
+
+El ajuste de los parámetros de los relés de sobrecorriente se basa en las características de los mismos, que se expresan en términos de curvas características. Estas curvas se utilizan para ajustar los valores de los parámetros de los relés, como la corriente nominal, la corriente de ajuste, el tiempo de operación, entre otros.
+
+En \cite{alroomi2017optimal} es presentado un enfoque unificado para modelar todas las curvas características estándar utilizadas en los relés de sobrecorriente de tiempo inverso. Este enfoque es útil para simular y optimizar la coordinación de protecciones en sistemas eléctricos. También es presentada una breve introducción a los relés de sobrecorriente y su importancia en la protección de los sistemas eléctricos. Luego, se discute la necesidad de modelar matemáticamente las características de los relés para poder simular y optimizar la coordinación de protecciones en el sistema eléctrico. 
+
+En \cite{alroomi2017optimal} el autor presenta una metodología para modelar todas las curvas características estándar. El enfoque se basa en la transformación de las curvas características a un espacio común utilizando la transformación de Box-Cox. Luego, se puede utilizar un modelo matemático unificado para ajustar y simular todas las curvas. La metodología propuesta por el autor es útil para simplificar el proceso de ajuste de los parámetros de los relés, ya que permite comparar diferentes curvas características y ajustar los parámetros de manera más precisa y eficiente. El autor presenta las diferentes curvas características estándar utilizadas en los relés de sobrecorriente de tiempo inverso, incluyendo las curvas IEC, IEEE y ANSI. Se explica cómo estas curvas se utilizan para ajustar los parámetros de los relés y cómo se pueden comparar entre sí.
+
+
+La tabla \ref{tab:relaycoefficients} muestra los coeficientes estándar más populares utilizados para calcular el tiempo de operación de los relés europeos y norteamericanos en función del tipo de curva de tiempo-corriente. Las abreviaciones utilizadas en la tabla son: IEC (Comisión Electrotécnica Internacional), IEEE (Instituto de Ingenieros Eléctricos y Electrónicos), US (Estados Unidos), CO (Operación Característica), RECT (Rectificador) y EDF (Electricité de France). Cada tipo de curva tiene su conjunto único de coeficientes estándar que se utilizan para calcular el tiempo de operación del relé en función de la corriente que fluye a través de él. La elección del tipo de curva y los coeficientes estándar dependen del tipo de aplicación y de las especificaciones del sistema eléctrico en el que se utilizará el relé.
+
+
+\begin{table}[H]
+\caption{Most popular standard coefficients for calculating the operating time of European and North American relays.}
+\label{tab:relaycoefficients}
+\begin{adjustwidth}{-\extralength}{0cm}
+    \newcolumntype{C}{>{\centering\arraybackslash}X}
+    %\begin{tabularx}{\fulllength}{CCCCC}
+    \begin{tabularx}{\fulllength}{>{\hsize=1.5\hsize}C*{4}{>{\hsize=0.5\hsize}C}}
+
+    \toprule
+\textbf{Tipo de curva\textsuperscript{a)}} & \textbf{Standard} & \textbf{B} & \textbf{A} & \textbf{C} \\
+\midrule
+IEC Standard Inverse (SI) & IEC/A & 0.02 & 0.14 & 0 \\
+IEC Very Inverse (VI) & IEC/B & 1 & 13.5 & 0 \\
+IEC Extremely Inverse (EI) & IEC/C & 2 & 80 & 0 \\
+IEC Ultra-Inverse (UI) & IEC & 2.5 & 315.2 & 0 \\
+IEC Long Time Inverse (LTI) & IEC/UK & 1 & 120 & 0 \\
+IEC Short Time Inverse (STI) & IEC/FR & 0.04 & 0.05 & 0 \\
+\midrule
+IEEE Long Time Inverse & IEEE & 0.02 & 0.086 & 0.185 \\
+IEEE Long Time Very Inverse & IEEE & 2 & 28.55 & 0.712 \\
+IEEE Long Time Extremely Inverse & IEEE & 2 & 64.07 & 0.25 \\
+IEEE Moderately Inverse & IEEE/IEC/D & 0.02 & 0.0515 & 0.114 \\
+IEEE Very Inverse & IEEE/IEC/E & 2 & 19.61 & 0.491 \\
+IEEE Extremely Inverse & IEEE/IEC/F & 2 & 28.2 & 0.1217 \\
+IEEE Short Time Inverse & IEEE & 0.02 & 0.167 & 58.118  \\
+IEEE Short Time Extremely Inverse & IEEE & 2 & 1.281 & 0.005\\
+\midrule
+US Moderately Inverse (U1) & US & 0.02 & 0.0104 & 0.2256 \\
+US Inverse\textsuperscript{b)} (U2) & US & 2 & 5.95 & 0.18 \\
+US Very Inverse (U3) & US & 2 & 3.88 & 0.963 \\
+US Extremely Inverse (U4) & US & 2 & 5.67  & 0.0352   \\
+US Short Time Inverse (U5) & US & 0.02 & 0.00342 & 0.00262 \\
+\midrule
+CO short time inverse (CO2) & CO & 0.02 & 0.023 & 0.01694 \\
+CO long time (CO5) & CO & 1.1 & 4.842 & 1.967  \\
+CO definite minimum time (CO6) & CO & 1.4 & 0.3164 & 0.1934  \\
+CO moderately inverse time (CO7) & CO & 0.02 & 0.0094 & 0.0366  \\
+CO time inverse (CO8) & CO & 2 & 5.95 & 0.18 \\
+CO very inverse time (CO9) & CO & 2 & 4.12 & 0.0958 \\
+CO extremely inverse time (CO11) & CO & 2 & 5.57 & 0.028 \\
+\midrule
+UK Rectifier Protection & RECT & 5.6 & 45900 & 0 \\
+BNP (EDF) & EDF & 2  & 1000 & 0.655 \\
+\bottomrule
+
+\end{tabularx}
+\end{adjustwidth}
+\end{table}
+
+ El aporte principal de este artículo es la inclusion del rango de curvas estandar para el modelo de optimización. En resumen, el enfoque unificado presentado por el autor en \cite{alroomi2017optimal} para modelar todas las curvas características estándar de los relés de sobrecorriente de tiempo inverso resulta muy útil para simular y optimizar la coordinación de protecciones en sistemas eléctricos. La metodología propuesta permite comparar diferentes curvas características y ajustar los parámetros de manera más precisa y eficiente, lo que simplifica el proceso de ajuste de los relés. Además, la tabla \ref{tab:relaycoefficients} muestra los coeficientes estándar más utilizados para calcular el tiempo de operación de los relés, lo que es útil para elegir el tipo de curva y los coeficientes adecuados en función del tipo de aplicación y de las especificaciones del sistema eléctrico en el que se utilizará el relé. En definitiva, los coeficientes estándar más populares son utilizados para calcular el tiempo de operación de los relés europeos y norteamericanos en función del tipo de curva de tiempo-corriente, este aporte permite amplizar el espacio de búsqueda con los parametros A, B y C de la ecuación \ref{eq_tif}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Results}
+
+\subsection{Resultados para el modo operativo 1 (OM1)}
+
+La tabla \ref{tablaDialOM1} muestra los parámetros de coordinación para OM1. En la tabla \ref{tablaDialOM1} son presentandos los valores de $TMS_i$, $PSM_{imax}$ y las curvas características de tiempo-corriente $SCC_i$ para cada uno de los relés. Note que existen valores de $TMS_i$ y $PSM_{imax}$ que no están definidos para algunos relés, lo que indica que dichos relés no pueden ver la falla en este OM1. reflejando que estos relés no son relevantes para la protección del sistema en el OM1. Los valores de $SCC_i$ indican las curvas características de tiempo-corriente que se utilizan en la función de disparo de cada relé. Estas características se utilizan para determinar el tiempo de operación de los relés en función de la corriente de falla que se está detectando. 
+
+\begin{table}[H]
+\caption{Coordination parameters for OM1}
+\label{tablaDialOM1}
+\centering
+\begin{tabular}{lccl}
+\toprule
+\textbf{Relay }	& \textbf{ $TMS_i$} &     \textbf{ $PSM_{imax}$} & \textbf{$SCC_i$}\\
+\midrule
+Relay1 &  &  &  \\ 
+Relay2 & 0.050 & 11.614 & IEEE Short Time Extremely Inverse \\
+Relay3 &  &  &  \\ 
+Relay4 & 1.420 & 12.857 & IEC Ultra-Inverse (UI) \\
+Relay5 &  &  &  \\ 
+Relay6 & 3.566 & 10.204 & IEC Extremely Inverse (EI) \\
+Relay7 & 4.403 & 0.050 & US Short Time Inverse (U5) \\
+Relay8 &  &  &  \\ 
+Relay9 &  &  &  \\ 
+Relay10 & 0.050 & 9.667 & IEEE Short Time Extremely Inverse \\
+Relay11 &  &  &  \\ 
+Relay12 & 0.050 & 10.193 & IEC Ultra-Inverse (UI) \\
+Relay13 &  &  &  \\ 
+Relay14 &  &  &  \\ 
+Relay15 &  &  &  \\ 
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\subsection{Resultados para el modo operativo 2 (OM2)}
+
+La tabla \ref{tablaDialOM2} muestra los parámetros de coordinación para el modo operativo OM2. Los valores de $TMS_i$, $PSM_{imax}$ y las características de tiempo-corriente $SCC_i$ son presentados para cada uno de los relés. En OM2, tanto la fuente de alimentación principal (red) como todas las plantas de generación distribuida están disponibles para satisfacer la demanda, por ende la tabla \ref{tablaDialOM2} especifica los valores de $TMS_i$, $SCC_{i}$ y $PSM_{imax}$ para cada relé, dadad la disponibilidad de recursos energéticos. Es importante destacar que la metodología utilizada logró una coordinación adecuada entre los relés principales y de respaldo en todas las fallas evaluadas en OM2.
+
+
+\begin{table}[H]
+\caption{Coordination parameters for OM2}
+\label{tablaDialOM2}
+\centering
+\begin{tabular}{lccl}
+\toprule
+\textbf{Relay }	& \textbf{ $TMS_i$} &     \textbf{ $PSM_{imax}$} & \textbf{$SCC_i$}\\
+\midrule
+Relay1 & 0.050 & 10.048 & IEEE Long Time Extremely Inverse \\
+Relay2 & 0.050 & 10.435 & IEEE Short Time Extremely Inverse \\
+Relay3 & 0.050 & 1.642 & IEEE Short Time Extremely Inverse \\
+Relay4 & 2.519 & 6.276 & IEC Ultra-Inverse (UI) \\
+Relay5 & 2.371 & 14.167 & US Extremely Inverse (U4) \\
+Relay6 & 3.699 & 11.107 & IEC Extremely Inverse (EI) \\
+Relay7 & 0.669 & 0.050 & US Moderately Inverse (U1) \\
+Relay8 & 1.443 & 0.162 & US Extremely Inverse (U4) \\
+Relay9 & 0.050 & 2.439 & IEEE Short Time Extremely Inverse \\
+Relay10 & 0.050 & 9.433 & IEC Ultra-Inverse (UI) \\
+Relay11 & 0.751 & 6.534 & IEC Short Time Inverse (STI) \\
+Relay12 & 0.050 & 7.639 & UK Rectifier Protection \\
+Relay13 & 2.549 & 10.848 & CO very inverse time (CO9) \\
+Relay14 & 0.338 & 3.462 & IEC Short Time Inverse (STI) \\
+Relay15 & 1.122 & 1.574 & CO moderately inverse time (CO7) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+\subsection{Resultados para el modo operativo 3 (OM3)}
+
+
+
+\begin{table}[H]
+\caption{Coordination parameters for OM3}
+\label{tablaDialOM3}
+\centering
+\begin{tabular}{lccl}
+\toprule
+\textbf{Relay }	& \textbf{ $TMS_i$} &     \textbf{ $PSM_{imax}$} & \textbf{$SCC_i$}\\
+\midrule
+Relay1 &  &  &  \\ 
+Relay2 & 0.050 & 7.935 & UK Rectifier Protection \\
+Relay3 &  &  &  \\ 
+Relay4 & 2.031 & 13.204 & IEC Ultra-Inverse (UI) \\
+Relay5 & 1.663 & 8.865 & IEEE Short Time Extremely Inverse \\
+Relay6 & 7.619 & 12.640 & IEEE Extremely Inverse \\
+Relay7 & 4.969 & 0.050 & US Short Time Inverse (U5) \\
+Relay8 & 7.799 & 1.794 & CO definite minimum time (CO6) \\
+Relay9 &  &  &  \\ 
+Relay10 & 0.050 & 13.137 & UK Rectifier Protection \\
+Relay11 & 1.794 & 13.003 & US Extremely Inverse (U4) \\
+Relay12 & 0.050 & 8.481 & IEC Ultra-Inverse (UI) \\
+Relay13 &  &  &  \\ 
+Relay14 &  &  &  \\ 
+Relay15 & 3.476 & 6.220 & US Short Time Inverse (U5) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\subsection{Resultados para el modo operativo 4 (OM4)}
+
+
+
+\begin{table}[H]
+\caption{Coordination parameters for OM4}
+\label{tablaDialOM4}
+\centering
+\begin{tabular}{lccl}
+\toprule
+\textbf{Relay }	& \textbf{ $TMS_i$} &     \textbf{ $PSM_{imax}$} & \textbf{$SCC_i$}\\
+\midrule
+Relay1 & 0.351 & 5.947 & IEEE Extremely Inverse \\
+Relay2 & 0.050 & 4.430 & IEEE Short Time Extremely Inverse \\
+Relay3 & 0.050 & 8.233 & IEEE Short Time Extremely Inverse \\
+Relay4 & 5.697 & 12.062 & UK Rectifier Protection \\
+Relay5 & 4.485 & 7.772 & UK Rectifier Protection \\
+Relay6 & 3.660 & 1.868 & US Short Time Inverse (U5) \\
+Relay7 &  &  &  \\ 
+Relay8 & 3.005 & 12.890 & CO very inverse time (CO9) \\
+Relay9 & 0.050 & 10.381 & IEEE Short Time Extremely Inverse \\
+Relay10 & 0.050 & 10.429 & IEEE Short Time Extremely Inverse \\
+Relay11 & 0.192 & 8.195 & IEC Very Inverse (VI) \\
+Relay12 & 0.050 & 5.246 & IEEE Short Time Extremely Inverse \\
+Relay13 & 0.726 & 3.953 & IEC Short Time Inverse (STI) \\
+Relay14 & 0.064 & 10.499 & IEC Very Inverse (VI) \\
+Relay15 & 3.578 & 9.977 & US Short Time Inverse (U5) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+% Example of a page in landscape format (with table and table footnote).
+%\startlandscape
+%\begin{table}[H] %% Table in wide page
+%\caption{This is a very wide table.\label{tab3}}
+%	\begin{tabularx}{\textwidth}{CCCC}
+%		\toprule
+%		\textbf{Title 1}	& \textbf{Title 2}	& \textbf{Title 3}	& \textbf{Title 4}\\
+%		\midrule
+%		Entry 1		& Data			& Data			& This cell has some longer content that runs over two lines.\\
+%		Entry 2		& Data			& Data			& Data\textsuperscript{1}\\
+%		\bottomrule
+%	\end{tabularx}
+%	\begin{adjustwidth}{+\extralength}{0cm}
+%		\noindent\footnotesize{\textsuperscript{1} This is a table footnote.}
+%	\end{adjustwidth}
+%\end{table}
+%\finishlandscape
+
+
+Please punctuate equations as regular text. Theorem-type environments (including propositions, lemmas, corollaries etc.) can be formatted as follows:
+%% Example of a theorem:
+\begin{Theorem}
+Example text of a theorem.
+\end{Theorem}
+
+The text continues here. Proofs must be formatted as follows:
+
+%% Example of a proof:
+\begin{proof}[Proof of Theorem 1]
+Text of the proof. Note that the phrase ``of Theorem 1'' is optional if it is clear which theorem is being referred to.
+\end{proof}
+The text continues here.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Discussion}
+
+\begin{comment}
+Authors should discuss the results and how they can be interpreted from the perspective of previous studies and of the working hypotheses. The findings and their implications should be discussed in the broadest context possible. Future research directions may also be highlighted.
+\end{comment}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusions}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{6pt} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% optional
+%\supplementary{The following supporting information can be downloaded at:  \linksupplementary{s1}, Figure S1: title; Table S1: title; Video S1: title.}
+
+% Only for the journal Methods and Protocols:
+% If you wish to submit a video article, please do so with any other supplementary material.
+% \supplementary{The following supporting information can be downloaded at: \linksupplementary{s1}, Figure S1: title; Table S1: title; Video S1: title. A supporting video article is available at doi: link.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\authorcontributions{For research articles with several authors, a short paragraph specifying their individual contributions must be provided. The following statements should be used ``Conceptualization, X.X. and Y.Y.; methodology, X.X.; software, X.X.; validation, X.X., Y.Y. and Z.Z.; formal analysis, X.X.; investigation, X.X.; resources, X.X.; data curation, X.X.; writing---original draft preparation, X.X.; writing---review and editing, X.X.; visualization, X.X.; supervision, X.X.; project administration, X.X.; funding acquisition, Y.Y. All authors have read and agreed to the published version of the manuscript.'', please turn to the  \href{http://img.mdpi.org/data/contributor-role-instruction.pdf}{CRediT taxonomy} for the term explanation. Authorship must be limited to those who have contributed substantially to the work~reported.}
+
+\funding{Please add: ``This research received no external funding'' or ``This research was funded by NAME OF FUNDER grant number XXX.'' and  and ``The APC was funded by XXX''. Check carefully that the details given are accurate and use the standard spelling of funding agency names at \url{https://search.crossref.org/funding}, any errors may affect your future funding.}
+
+\institutionalreview{In this section, you should add the Institutional Review Board Statement and approval number, if relevant to your study. You might choose to exclude this statement if the study did not require ethical approval. Please note that the Editorial Office might ask you for further information. Please add “The study was conducted in accordance with the Declaration of Helsinki, and approved by the Institutional Review Board (or Ethics Committee) of NAME OF INSTITUTE (protocol code XXX and date of approval).” for studies involving humans. OR “The animal study protocol was approved by the Institutional Review Board (or Ethics Committee) of NAME OF INSTITUTE (protocol code XXX and date of approval).” for studies involving animals. OR “Ethical review and approval were waived for this study due to REASON (please provide a detailed justification).” OR “Not applicable” for studies not involving humans or animals.}
+
+\informedconsent{Any research article describing a study involving humans should contain this statement. Please add ``Informed consent was obtained from all subjects involved in the study.'' OR ``Patient consent was waived due to REASON (please provide a detailed justification).'' OR ``Not applicable'' for studies not involving humans. You might also choose to exclude this statement if the study did not involve humans.
+
+Written informed consent for publication must be obtained from participating patients who can be identified (including by the patients themselves). Please state ``Written informed consent has been obtained from the patient(s) to publish this paper'' if applicable.}
+
+\dataavailability{We encourage all authors of articles published in MDPI journals to share their research data. In this section, please provide details regarding where data supporting reported results can be found, including links to publicly archived datasets analyzed or generated during the study. Where no new data were created, or where data is unavailable due to privacy or ethical re-strictions, a statement is still required. Suggested Data Availability Statements are available in section “MDPI Research Data Policies” at \url{https://www.mdpi.com/ethics}.} 
+
+\acknowledgments{In this section you can acknowledge any support given which is not covered by the author contribution or funding sections. This may include administrative and technical support, or donations in kind (e.g., materials used for experiments).}
+
+\conflictsofinterest{Declare conflicts of interest or state ``The authors declare no conflict of interest.'' Authors must identify and declare any personal circumstances or interest that may be perceived as inappropriately influencing the representation or interpretation of reported research results. Any role of the funders in the design of the study; in the collection, analyses or interpretation of data; in the writing of the manuscript; or in the decision to publish the results must be declared in this section. If there is no role, please state ``The funders had no role in the design of the study; in the collection, analyses, or interpretation of data; in the writing of the manuscript; or in the decision to publish the~results''.} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Optional
+\sampleavailability{Samples of the compounds ... are available from the authors.}
+
+%% Only for journal Encyclopedia
+%\entrylink{The Link to this entry published on the encyclopedia platform.}
+
+\abbreviations{Abbreviations}{
+The following abbreviations are used in this manuscript:\\
+
+\noindent 
+\begin{tabular}{@{}ll}
+MDPI & Multidisciplinary Digital Publishing Institute\\
+DOAJ & Directory of open access journals\\
+TLA & Three letter acronym\\
+LD & Linear dichroism
+\end{tabular}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Optional
+\appendixtitles{no} % Leave argument "no" if all appendix headings stay EMPTY (then no dot is printed after "Appendix A"). If the appendix sections contain a heading then change the argument to "yes".
+\appendixstart
+\appendix
+\section[\appendixname~\thesection]{}
+\subsection[\appendixname~\thesubsection]{}
+The appendix is an optional section that can contain details and data supplemental to the main text---for example, explanations of experimental details that would disrupt the flow of the main text but nonetheless remain crucial to understanding and reproducing the research shown; figures of replicates for experiments of which representative data are shown in the main text can be added here if brief, or as Supplementary Data. Mathematical proofs of results not central to the paper can be added as an appendix.
+
+\begin{table}[H] 
+\caption{This is a table caption.\label{tab5}}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\begin{tabularx}{\textwidth}{CCC}
+\toprule
+\textbf{Title 1}	& \textbf{Title 2}	& \textbf{Title 3}\\
+\midrule
+Entry 1		& Data			& Data\\
+Entry 2		& Data			& Data\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section[\appendixname~\thesection]{}
+All appendix sections must be cited in the main text. In the appendices, Figures, Tables, etc. should be labeled, starting with ``A''---e.g., Figure A1, Figure A2, etc.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{adjustwidth}{-\extralength}{0cm}
+%\printendnotes[custom] % Un-comment to print a list of endnotes
+
+\reftitle{References}
+
+% Please provide either the correct journal abbreviation (e.g. according to the “List of Title Word Abbreviations” http://www.issn.org/services/online-services/access-to-the-ltwa/) or the full name of the journal.
+% Citations and References in Supplementary files are permitted provided that they also appear in the reference list here. 
+
+%=====================================
+% References, variant A: external bibliography
+%=====================================
+\externalbibliography{yes}
+\bibliography{References.bib}
+
+%=====================================
+% References, variant B: internal bibliography
+%=====================================
+\begin{comment}
+
+\begin{thebibliography}{999}
+% Reference 1
+\bibitem[Author1(year)]{ref-journal}
+Author~1, T. The title of the cited article. {\em Journal Abbreviation} {\bf 2008}, {\em 10}, 142--149.
+% Reference 2
+\bibitem[Author2(year)]{ref-book1}
+Author~2, L. The title of the cited contribution. In {\em The Book Title}; Editor 1, F., Editor 2, A., Eds.; Publishing House: City, Country, 2007; pp. 32--58.
+% Reference 3
+\bibitem[Author3(year)]{ref-book2}
+Author 1, A.; Author 2, B. \textit{Book Title}, 3rd ed.; Publisher: Publisher Location, Country, 2008; pp. 154--196.
+% Reference 4
+\bibitem[Author4(year)]{ref-unpublish}
+Author 1, A.B.; Author 2, C. Title of Unpublished Work. \textit{Abbreviated Journal Name} year, \textit{phrase indicating stage of publication (submitted; accepted; in press)}.
+% Reference 5
+\bibitem[Author5(year)]{ref-communication}
+Author 1, A.B. (University, City, State, Country); Author 2, C. (Institute, City, State, Country). Personal communication, 2012.
+% Reference 6
+\bibitem[Author6(year)]{ref-proceeding}
+Author 1, A.B.; Author 2, C.D.; Author 3, E.F. Title of presentation. In Proceedings of the Name of the Conference, Location of Conference, Country, Date of Conference (Day Month Year); Abstract Number (optional), Pagination (optional).
+% Reference 7
+\bibitem[Author7(year)]{ref-thesis}
+Author 1, A.B. Title of Thesis. Level of Thesis, Degree-Granting University, Location of University, Date of Completion.
+% Reference 8
+\bibitem[Author8(year)]{ref-url}
+Title of Site. Available online: URL (accessed on Day Month Year).
+\end{thebibliography}
+\end{comment}
+
+% If authors have biography, please use the format below
+%\section*{Short Biography of Authors}
+%\bio
+%{\raisebox{-0.35cm}{\includegraphics[width=3.5cm,height=5.3cm,clip,keepaspectratio]{Definitions/author1.pdf}}}
+%{\textbf{Firstname Lastname} Biography of first author}
+%
+%\bio
+%{\raisebox{-0.35cm}{\includegraphics[width=3.5cm,height=5.3cm,clip,keepaspectratio]{Definitions/author2.jpg}}}
+%{\textbf{Firstname Lastname} Biography of second author}
+
+% For the MDPI journals use author-date citation, please follow the formatting guidelines on http://www.mdpi.com/authors/references
+% To cite two works by the same author: \citeauthor{ref-journal-1a} (\citeyear{ref-journal-1a}, \citeyear{ref-journal-1b}). This produces: Whittaker (1967, 1975)
+% To cite two works by the same author with specific pages: \citeauthor{ref-journal-3a} (\citeyear{ref-journal-3a}, p. 328; \citeyear{ref-journal-3b}, p.475). This produces: Wong (1999, p. 328; 2000, p. 475)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% for journal Sci
+%\reviewreports{\\
+%Reviewer 1 comments and authors’ response\\
+%Reviewer 2 comments and authors’ response\\
+%Reviewer 3 comments and authors’ response
+%}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\PublishersNote{}
+\end{adjustwidth}
+\end{document}
+
